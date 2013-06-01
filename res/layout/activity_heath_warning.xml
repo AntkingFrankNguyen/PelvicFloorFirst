@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.cfa.pelvicfloorfirst.ui.TitleBarView
+        android:id="@+id/titleBarView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+    </com.cfa.pelvicfloorfirst.ui.TitleBarView>
+
+    <com.cfa.pelvicfloorfirst.ui.SimpleBottomBarView
+        android:id="@+id/simpleBottomBarView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+    </com.cfa.pelvicfloorfirst.ui.SimpleBottomBarView>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/simpleBottomBarView1"
+        android:layout_below="@+id/titleBarView1" >
+
+    </RelativeLayout>
+
+</RelativeLayout>

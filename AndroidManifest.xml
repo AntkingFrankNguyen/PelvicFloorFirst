@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cfa.pelvicfloorfirst"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoTitle" >
+        <activity
+            android:name=".activity.LogoAnimationActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PelvicFloorFirstActivity" />
+        <activity android:name=".activity.IntroductionActivity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.ExercisesInWorkoutActivity" />
+        <activity android:name=".activity.HeathWarningActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.ImageOfExerciseActivity" />
+        <activity android:name=".activity.LinkActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.LoginWithAccountActivity" />
+        <activity android:name=".activity.OtherResourceActivity" />
+        <activity android:name=".activity.SaveActivity" />
+        <activity android:name=".activity.SelectMusicActivity" />
+        <activity android:name=".activity.ShareActivity" />
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.StartActivity" />
+        <activity android:name=".activity.StartTypeActivity" />
+        <activity android:name=".activity.VideoOfExerciseActivity" />
+        <activity android:name=".activity.WorkoutActivity" />
+    </application>
+
+</manifest>

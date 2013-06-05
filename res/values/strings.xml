@@ -4,5 +4,13 @@
     <string name="app_name">Pelvic Floor First</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-
-</resources>
+    <string name="health_info">The pelvic floor is the base of the group of muscles referred to as your \'core\'. 
+        These muscles are located in your pelvis, and stretch like a trampoline or hammock from 
+        the pubic bone (at the front) to the coccyx or tail-bone (at the back) and from side to side 
+        (diagram 1).The pelvic floor muscles work with your deep abdominal (tummy) and deep back muscles 
+        and diaphragm to stabilise and support your spine. They also help control the pressure inside your
+         abdomen to deal with the pushing down force when you lift or strain - such as during exercise.
+         Pelvic floor muscles support the bladder and bowel in men, and the bladder, bowel and uterus in 
+         women. They also help maintain bladder and bowel control and play an important role in sexual 
+         sensation and function. </string>
+</resources>

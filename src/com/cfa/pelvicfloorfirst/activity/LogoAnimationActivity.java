@@ -1,34 +1,71 @@
 package com.cfa.pelvicfloorfirst.activity;
 
 import android.app.Activity;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.DisplayMetrics;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 
 import com.cfa.pelvicfloorfirst.R;
 import com.cfa.pelvicfloorfirst.util.CommConstant;
 import com.cfa.pelvicfloorfirst.util.Util;
 
 public class LogoAnimationActivity extends Activity {
+	
+	ImageView ivLogo;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_logo_animation);
+		
+		ivLogo = (ImageView) findViewById(R.id.ivLogo);
 
-		MainCountDown countDown = new MainCountDown(1000, 100);
-		countDown.start();
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		animationLogo();
+	}
+	
+	private void animationLogo() {
+		DisplayMetrics metrics = getResources()
+				.getDisplayMetrics();
+		int height = metrics.heightPixels;
 
-//		SharedPreferences account = getSharedPreferences(CommConstant.PREFS_NAME, 0);
+		TranslateAnimation tAnimation = new TranslateAnimation(0, 0, height, 10);
 
-		// We need an Editor object to make preference changes.
-//		SharedPreferences.Editor editor = account.edit();
-//
-//		editor.putString(CommConstant.WEATHER_INFO, "");
-//		editor.putString(CommConstant.REQUEST_GPS, "");
-//		editor.putString(CommConstant.ADDRESS, "");
-//		
-//		// Commit the edits!
-//		editor.commit();
+		tAnimation.setDuration(1200);
+		tAnimation.setRepeatCount(0);
+		tAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+		tAnimation.setFillAfter(true);
+		tAnimation.setAnimationListener(new AnimationListener() {
+
+			public void onAnimationStart(Animation animation) {
+				MediaPlayer mp;
+				setVolumeControlStream(AudioManager.STREAM_MUSIC); 
+		        mp = MediaPlayer.create(LogoAnimationActivity.this, R.raw.start_up);
+		        mp.start();
+			}
+
+			public void onAnimationRepeat(Animation animation) {
+				//
+			}
+
+			public void onAnimationEnd(Animation animation) {
+				MainCountDown countDown = new MainCountDown(600, 100);
+				countDown.start();
+			}
+		});
+		ivLogo.startAnimation(tAnimation);
 	}
 
 	protected class MainCountDown extends CountDownTimer {
@@ -62,4 +99,3 @@ public class LogoAnimationActivity extends Activity {
 		System.gc();
 	}
 }
-

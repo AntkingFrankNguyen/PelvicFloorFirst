@@ -1,5 +1,13 @@
 package com.cfa.pelvicfloorfirst.ui;
 
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+
 import com.cfa.pelvicfloorfirst.R;
 import com.cfa.pelvicfloorfirst.activity.HeathWarningActivity;
 import com.cfa.pelvicfloorfirst.activity.IntroductionActivity;
@@ -7,15 +15,7 @@ import com.cfa.pelvicfloorfirst.activity.OtherResourceActivity;
 import com.cfa.pelvicfloorfirst.util.CommConstant;
 import com.cfa.pelvicfloorfirst.util.Util;
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.view.View;
-import android.view.View.OnClickListener;
-
-public class SimpleBottomBarView extends LinearLayout implements
+public class SimpleBottomBarView extends RelativeLayout implements
 		OnClickListener {
 
 	private Context mContext;

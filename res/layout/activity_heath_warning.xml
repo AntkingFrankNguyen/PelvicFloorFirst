@@ -9,16 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" >
-
     </com.cfa.pelvicfloorfirst.ui.TitleBarView>
-
-    <com.cfa.pelvicfloorfirst.ui.SimpleBottomBarView
-        android:id="@+id/simpleBottomBarView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" >
-    </com.cfa.pelvicfloorfirst.ui.SimpleBottomBarView>
 
     <RelativeLayout
         android:id="@+id/content"
@@ -27,6 +18,27 @@
         android:layout_above="@+id/simpleBottomBarView1"
         android:layout_below="@+id/titleBarView1" >
 
+       <ScrollView 
+        android:id="@+id/ScrollView01" 
+        android:layout_height="match_parent" 
+        android:layout_width="fill_parent"> 
+
+        <TextView 
+            android:id="@+id/tv"
+            android:textSize="30dp" 
+            android:layout_height="wrap_content" 
+            android:layout_width="wrap_content" 
+            android:text="@string/health_info"/> 
+
+    </ScrollView>
     </RelativeLayout>
+
+    <com.cfa.pelvicfloorfirst.ui.SimpleBottomBarView
+        android:id="@+id/simpleBottomBarView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+    </com.cfa.pelvicfloorfirst.ui.SimpleBottomBarView>
 
 </RelativeLayout>

@@ -9,7 +9,7 @@ public class HeathWarningActivity extends BaseSimpleActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_heath_warning);
 		super.onCreate(savedInstanceState);
-		setTitle("HEATH WARNING");
+		setTitle("HEALTH WARNING");
 		
 		simpleBottomBarView.setTextLeftBtn("NO");
 		simpleBottomBarView.setTextRightBtn("YES");
